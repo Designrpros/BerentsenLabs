@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-32 px-6 bg-white/5">
+      <section id="projects" className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
             <span className="text-teal-400">Featured</span> Projects
