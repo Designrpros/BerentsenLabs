@@ -17,51 +17,62 @@ const translations: Record<Language, Record<string, string>> = {
     agents: 'Agenter',
     
     // Hero
-    heroBadge: '🤖 AI Agent Bibliotek',
-    heroTitle1: 'Nedlastbare',
-    heroTitle2: 'AI Agenter',
-    heroDesc: 'Ferdige AI-agent-promptes for OpenClaw og andre plattformer. Last ned, tilpass og implementer på minutter.',
-    heroCta: 'Se alle agenter ↓',
+    heroBadge: '🤖 AI & Web Development Studio',
+    heroTitle1: 'Bygger',
+    heroTitle2: 'Fremtiden',
+    heroDesc: 'Vi lager intelligente AI-assistenter og fantastiske webopplevelser. Fra konsept til produksjon.',
+    heroCta: 'Se Agenter →',
+    heroContact: 'Kontakt Oss',
     
-    // Info
-    norwegianVersion: 'Norsk Versjon',
-    norwegianDesc: 'Optimalisert for norske bedrifter og team.',
-    englishVersion: 'English Version',
-    englishDesc: 'Original English versions for international use.',
-    
-    // Agents Grid
-    allAgents: 'Alle',
-    download: 'Last ned',
-    viewDetails: 'Vis detaljer',
+    // Services
+    servicesTitle1: 'Våre',
+    servicesTitle2: 'Tjenester',
+    servicesDesc: 'Helhetlige løsninger for din digitale tilstedeværelse',
+    aiAssistants: 'AI-Assistenter',
+    aiAssistantsDesc: 'Skreddersydde OpenClaw og AI-assistenter for din arbeidsflyt.',
+    webDev: 'Webutvikling',
+    webDevDesc: 'Moderne nettsider og webapplikasjoner bygget med Next.js.',
+    mobileApps: 'Mobilapplikasjoner',
+    mobileAppsDesc: 'Native og cross-platform mobilapplikasjoner.',
+    systemIntegration: 'Systemintegrasjon',
+    systemIntegrationDesc: 'Koble verktøy og automatisere arbeidsflyter.',
+    uiuxDesign: 'UI/UX Design',
+    uiuxDesignDesc: 'Vakre, intuitive grensesnitt.',
+    deployment: 'Deployering',
+    deploymentDesc: 'Fra utvikling til produksjon.',
     
     // CTA
+    ctaTitle: 'Kom',
+    ctaTitle2: 'i gang',
+    ctaDesc: 'Har du et prosjekt i tankene? La oss bygge noe fantastisk sammen.',
+    ctaButton: 'Kontakt Oss →',
+    
+    // Footer
+    rights: 'Alle rettigheter reservert.',
+    
+    // Landing page agents section
+    viewAgents: 'Se Alle Agenter →',
+    
+    // Agents page
+    heroAgentsBadge: '🤖 AI Agent Bibliotek',
+    heroAgentsTitle1: 'Nedlastbare',
+    heroAgentsTitle2: 'AI Agenter',
+    heroAgentsDesc: 'Ferdige AI-agent-promptes for OpenClaw og andre plattformer. Last ned, tilpass og implementer på minutter.',
+    allAgents: 'Alle',
+    download: 'Last ned',
+    
+    // CTA agents
     needHelp: 'Trenger du',
     help: 'hjelp',
     helpDesc: 'Vi hjelper deg med å sette opp og tilpasse agenter for din bedrift.',
     contact: 'Kontakt oss →',
     
-    // Footer
-    rights: 'Alle rettigheter reservert.',
-    
     // Detail Modal
     description: 'Beskrivelse',
     skills: 'Kjernekompetanse',
     method: 'Arbeidsmetode',
-    example: 'Eksempel',
     downloadMd: 'Last ned som .md',
     close: 'Lukk',
-    
-    // Landing page
-    ourServices: 'Våre Tjenester',
-    servicesDesc: 'Helhetlige løsninger for din digitale tilstedeværelse',
-    featuredProjects: 'Utvalgte Prosjekter',
-    projectsDesc: 'Virkelige applikasjoner vi har bygget og deployet',
-    about: 'Om Oss',
-    contactTitle: 'Ta Kontakt',
-    contactDesc: 'Har du et prosjekt i tankene? Vi vil gjerne høre fra deg.',
-    emailUs: '📧 Send e-post',
-    callUs: '📱 Ring oss',
-    location: 'Østerås, Norge',
   },
   en: {
     // Navbar
@@ -69,51 +80,62 @@ const translations: Record<Language, Record<string, string>> = {
     agents: 'Agents',
     
     // Hero
-    heroBadge: '🤖 AI Agent Library',
-    heroTitle1: 'Downloadable',
-    heroTitle2: 'AI Agents',
-    heroDesc: 'Ready-to-use AI agent prompts for OpenClaw and other platforms. Download, customize, and implement in minutes.',
-    heroCta: 'View all agents ↓',
+    heroBadge: '🤖 AI & Web Development Studio',
+    heroTitle1: 'Building',
+    heroTitle2: 'Tomorrow',
+    heroDesc: 'We craft intelligent AI assistants and stunning web experiences. From concept to deployment.',
+    heroCta: 'View Agents →',
+    heroContact: 'Contact Us',
     
-    // Info
-    norwegianVersion: 'Norwegian Version',
-    norwegianDesc: 'Optimized for Norwegian businesses and teams.',
-    englishVersion: 'English Version',
-    englishDesc: 'Original English versions for international use.',
-    
-    // Agents Grid
-    allAgents: 'All',
-    download: 'Download',
-    viewDetails: 'View details',
+    // Services
+    servicesTitle1: 'Our',
+    servicesTitle2: 'Services',
+    servicesDesc: 'Comprehensive solutions for your digital presence',
+    aiAssistants: 'AI Assistants',
+    aiAssistantsDesc: 'Custom OpenClaw and AI assistants tailored to your workflow.',
+    webDev: 'Web Development',
+    webDevDesc: 'Modern websites and web apps built with Next.js.',
+    mobileApps: 'Mobile Apps',
+    mobileAppsDesc: 'Native and cross-platform mobile applications.',
+    systemIntegration: 'System Integration',
+    systemIntegrationDesc: 'Connect tools and automate workflows.',
+    uiuxDesign: 'UI/UX Design',
+    uiuxDesignDesc: 'Beautiful, intuitive interfaces.',
+    deployment: 'Deployment',
+    deploymentDesc: 'From development to production.',
     
     // CTA
+    ctaTitle: 'Get',
+    ctaTitle2: 'Started',
+    ctaDesc: 'Have a project in mind? Let\'s build something amazing together.',
+    ctaButton: 'Contact Us →',
+    
+    // Footer
+    rights: 'All rights reserved.',
+    
+    // Landing page agents section
+    viewAgents: 'View All Agents →',
+    
+    // Agents page
+    heroAgentsBadge: '🤖 AI Agent Library',
+    heroAgentsTitle1: 'Downloadable',
+    heroAgentsTitle2: 'AI Agents',
+    heroAgentsDesc: 'Ready-to-use AI agent prompts for OpenClaw and other platforms. Download, customize, implement in minutes.',
+    allAgents: 'All',
+    download: 'Download',
+    
+    // CTA agents
     needHelp: 'Need',
     help: 'help',
     helpDesc: 'We help you set up and customize agents for your business.',
     contact: 'Contact us →',
     
-    // Footer
-    rights: 'All rights reserved.',
-    
     // Detail Modal
     description: 'Description',
     skills: 'Core Skills',
     method: 'Work Method',
-    example: 'Example',
     downloadMd: 'Download as .md',
     close: 'Close',
-    
-    // Landing page
-    ourServices: 'Our Services',
-    servicesDesc: 'Comprehensive solutions for your digital presence',
-    featuredProjects: 'Featured Projects',
-    projectsDesc: 'Real-world applications we have built and deployed',
-    about: 'About Us',
-    contactTitle: 'Get in Touch',
-    contactDesc: 'Have a project in mind? We would love to hear from you.',
-    emailUs: '📧 Email Us',
-    callUs: '📱 Call Us',
-    location: 'Østerås, Norway',
   }
 }
 
@@ -123,7 +145,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>('no')
   
   useEffect(() => {
-    // Detect browser language
     const browserLang = navigator.language.toLowerCase()
     if (browserLang.startsWith('no')) {
       setLang('no')

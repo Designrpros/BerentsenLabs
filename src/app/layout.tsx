@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { LanguageProvider } from '@/components/LanguageProvider'
 
 export const metadata: Metadata = {
   title: 'Berentsen Labs | AI & Web Development Studio',
@@ -24,7 +25,11 @@ export default function RootLayout({
           `
         }} />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   )
 }
