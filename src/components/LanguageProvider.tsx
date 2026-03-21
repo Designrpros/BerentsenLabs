@@ -73,6 +73,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     rights: 'Alle rettigheter reservert.',
+    navHome: 'Hjem',
+    navAgents: 'Agenter',
     
     // Agents page
     heroAgentsBadge: 'AI Agent Bibliotek',
@@ -153,6 +155,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     rights: 'All rights reserved.',
+    navHome: 'Home',
+    navAgents: 'Agents',
     
     // Agents page
     heroAgentsBadge: 'AI Agent Library',

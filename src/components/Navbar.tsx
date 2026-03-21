@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useLanguage } from './LanguageProvider'
 
 interface NavbarProps {
   showBack?: boolean
 }
 
 export default function Navbar({ showBack = false }: NavbarProps) {
+  const { lang, t } = useLanguage()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -21,8 +23,11 @@ export default function Navbar({ showBack = false }: NavbarProps) {
             </Link>
           </div>
           <div className="hidden md:flex gap-8">
+            <Link href="/" className="hover:text-teal-400 transition-colors">
+              {t('navHome')}
+            </Link>
             <Link href="/agenter" className="hover:text-teal-400 transition-colors">
-              Agenter
+              {t('navAgents')}
             </Link>
           </div>
           <button 
@@ -49,10 +54,10 @@ export default function Navbar({ showBack = false }: NavbarProps) {
           </button>
           <div className="text-center space-y-8">
             <Link href="/" className="block text-3xl font-bold hover:text-teal-400 transition-colors" onClick={() => setMenuOpen(false)}>
-              Hjem
+              {t('navHome')}
             </Link>
             <Link href="/agenter" className="block text-3xl font-bold text-teal-400" onClick={() => setMenuOpen(false)}>
-              Agenter
+              {t('navAgents')}
             </Link>
           </div>
         </div>
