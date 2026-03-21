@@ -35,8 +35,8 @@ const translations: Record<Language, Record<string, string>> = {
     project3Category: 'Læring',
     project3Desc: 'AI-drevet læringsplattform',
     project4Category: 'Ditt prosjekt',
-    project4Title: 'Ditt / Your Project',
-    project4Desc: 'Ta kontakt for å diskutere ditt prosjekt',
+    project4Title: 'Ditt prosjekt',
+    project4Desc: 'Ta kontakt for å diskutere ditt neste prosjekt',
     
     // About
     aboutTitle: 'Om',
@@ -115,8 +115,8 @@ const translations: Record<Language, Record<string, string>> = {
     project3Category: 'Learning',
     project3Desc: 'AI-powered learning platform',
     project4Category: 'Your project',
-    project4Title: 'Your / Ditt Project',
-    project4Desc: 'Contact us to discuss your project',
+    project4Title: 'Your project',
+    project4Desc: 'Contact us to discuss your next project',
     
     // About
     aboutTitle: 'About',
