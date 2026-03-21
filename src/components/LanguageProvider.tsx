@@ -34,9 +34,9 @@ const translations: Record<Language, Record<string, string>> = {
     project2Desc: 'Profesjonelt webdesign og utvikling',
     project3Category: 'Læring',
     project3Desc: 'AI-drevet læringsplattform',
-    project4Category: 'Agent',
-    project4Title: 'PeakBrowser',
-    project4Desc: 'Desktop AI-agent app',
+    project4Category: 'Ditt prosjekt',
+    project4Title: 'Ditt / Your Project',
+    project4Desc: 'Ta kontakt for å diskutere ditt prosjekt',
     
     // About
     aboutTitle: 'Om',
@@ -114,9 +114,9 @@ const translations: Record<Language, Record<string, string>> = {
     project2Desc: 'Professional web design and development',
     project3Category: 'Learning',
     project3Desc: 'AI-powered learning platform',
-    project4Category: 'Agent',
-    project4Title: 'PeakBrowser',
-    project4Desc: 'Desktop AI agent app',
+    project4Category: 'Your project',
+    project4Title: 'Your / Ditt Project',
+    project4Desc: 'Contact us to discuss your project',
     
     // About
     aboutTitle: 'About',

@@ -82,8 +82,8 @@ export default function Home() {
               </div>
             </a>
             <div className="group relative rounded-2xl overflow-hidden border border-white/10">
-              <div className="aspect-video bg-gradient-to-br from-orange-900 to-black p-8 flex flex-col justify-end">
-                <div className="absolute top-4 right-4 text-sm text-orange-400">{t('project4Category')}</div>
+              <div className="aspect-video bg-gradient-to-br from-teal-900 to-black p-8 flex flex-col justify-end">
+                <div className="absolute top-4 right-4 text-sm text-teal-400">{t('project4Category')}</div>
                 <h3 className="text-3xl font-bold mb-2">{t('project4Title')}</h3>
                 <p className="text-gray-400">{t('project4Desc')}</p>
               </div>
