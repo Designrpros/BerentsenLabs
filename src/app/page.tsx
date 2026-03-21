@@ -49,6 +49,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <span className="text-teal-400">{t('aboutTitle')}</span> {t('aboutTitle2')}
+          </h2>
+          <div className="text-xl text-gray-300 space-y-6">
+            <p>
+              <span className="text-teal-400 font-bold">Berentsen Labs</span> {t('aboutP1')}
+            </p>
+            <p>
+              {t('aboutP2')}
+            </p>
+            <p>
+              {t('aboutP3')}
+            </p>
+          </div>
+          
+          <div className="mt-16 grid grid-cols-3 gap-8">
+            {[
+              { number: '50+', label: t('stat1') },
+              { number: '210+', label: t('stat2') },
+              { number: '∞', label: t('stat3') }
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-teal-400">{stat.number}</div>
+                <div className="text-gray-400 mt-2">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="py-32 px-6">
         <div className="max-w-6xl mx-auto">
