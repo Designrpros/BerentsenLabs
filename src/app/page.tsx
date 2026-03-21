@@ -1,6 +1,9 @@
+"use client"
+import { useState } from "react"
 import Link from 'next/link'
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
@@ -13,8 +16,34 @@ export default function Home() {
           <div className="hidden md:flex gap-8">
             <a href="/agenter" className="hover:text-teal-400 transition-colors">Agenter</a>
           </div>
+          <button 
+            className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
+            onClick={() => setMenuOpen(true)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </nav>
+      
+      {/* Mobile Menu Overlay */}
+      {menuOpen && (
+        <div className="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center">
+          <button 
+            className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-lg transition-colors"
+            onClick={() => setMenuOpen(false)}
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="text-center space-y-8">
+            <a href="/" className="block text-3xl font-bold hover:text-teal-400 transition-colors" onClick={() => setMenuOpen(false)}>Hjem</a>
+            <a href="/agenter" className="block text-3xl font-bold text-teal-400" onClick={() => setMenuOpen(false)}>Agenter</a>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
