@@ -201,7 +201,7 @@ Som ${agent.navn} samarbeider du tett med:
           </div>
           <div className="flex gap-6 items-center">
             <a href="/" className="text-gray-400 hover:text-teal-400 transition-colors">Hjem</a>
-            <a href="/agenter" className="text-teal-400 font-semibold">Agenter</a>
+            <span className="text-teal-400 font-semibold">Agenter</span>
           </div>
         </div>
       </nav>

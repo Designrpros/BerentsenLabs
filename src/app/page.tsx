@@ -11,11 +11,11 @@ export default function Home() {
             <span className="text-white">Labs</span>
           </div>
           <div className="hidden md:flex gap-8">
-            <a href="#services" className="hover:text-teal-400 transition-colors">Services</a>
+            <a href="#services" className="hover:text-teal-400 transition-colors">Tjenester</a>
             <a href="/agenter" className="hover:text-teal-400 transition-colors">Agenter</a>
-            <a href="#projects" className="hover:text-teal-400 transition-colors">Projects</a>
-            <a href="#about" className="hover:text-teal-400 transition-colors">About</a>
-            <a href="#contact" className="hover:text-teal-400 transition-colors">Contact</a>
+            <a href="#projects" className="hover:text-teal-400 transition-colors">Prosjekter</a>
+            <a href="#about" className="hover:text-teal-400 transition-colors">Om Oss</a>
+            <a href="#contact" className="hover:text-teal-400 transition-colors">Kontakt</a>
           </div>
         </div>
       </nav>
