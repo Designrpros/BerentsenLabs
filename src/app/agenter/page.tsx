@@ -96,7 +96,7 @@ ${agent.metode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
                 <h3 className="text-xl font-bold mb-1">{agent.navn}</h3>
                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">{agent.beskrivelse}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {agent.kompetanse.slice(0, 3).map(k => (
+                  {agent.kompetanse.slice(0, 3).map((k) => (
                     <span key={k} className="px-2 py-1 rounded-full bg-white/5 text-xs text-gray-400">{k}</span>
                   ))}
                 </div>
@@ -131,7 +131,7 @@ ${agent.metode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-gray-300">{t('skills')}</h3>
                 <div className="flex flex-wrap gap-2">
-                  {valgtAgent.kompetanse.map(k => (
+                  {valgtAgent.kompetanse.map((k) => (
                     <span key={k} className="px-3 py-2 rounded-lg bg-teal-500/10 text-teal-400 text-sm border border-teal-500/20">{k}</span>
                   ))}
                 </div>

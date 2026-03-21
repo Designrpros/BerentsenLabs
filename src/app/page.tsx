@@ -61,17 +61,17 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '🤖', title: t('aiAssistants'), desc: t('aiAssistantsDesc') },
-              { icon: '🌐', title: t('webDev'), desc: t('webDevDesc') },
-              { icon: '📱', title: t('mobileApps'), desc: t('mobileAppsDesc') },
-              { icon: '🔧', title: t('systemIntegration'), desc: t('systemIntegrationDesc') },
-              { icon: '🎨', title: t('uiuxDesign'), desc: t('uiuxDesignDesc') },
-              { icon: '🚀', title: t('deployment'), desc: t('deploymentDesc') }
+              { icon: '🤖', titleKey: 'aiAssistants', descKey: 'aiAssistantsDesc' },
+              { icon: '🌐', titleKey: 'webDev', descKey: 'webDevDesc' },
+              { icon: '📱', titleKey: 'mobileApps', descKey: 'mobileAppsDesc' },
+              { icon: '🔧', titleKey: 'systemIntegration', descKey: 'systemIntegrationDesc' },
+              { icon: '🎨', titleKey: 'uiuxDesign', descKey: 'uiuxDesignDesc' },
+              { icon: '🚀', titleKey: 'deployment', descKey: 'deploymentDesc' }
             ].map((service, i) => (
               <div key={i} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] group">
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">{service.title}</h3>
-                <p className="text-gray-400">{service.desc}</p>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">{t(service.titleKey)}</h3>
+                <p className="text-gray-400">{t(service.descKey)}</p>
               </div>
             ))}
           </div>
