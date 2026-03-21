@@ -5,7 +5,28 @@ import LanguageToggle from '@/components/LanguageToggle'
 import { useLanguage } from '@/components/LanguageProvider'
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { lang, t } = useLanguage()
+  
+  const projects = [
+    { 
+      name: 'Designr.Pro', 
+      url: 'https://designr.pro', 
+      desc: lang === 'no' ? 'Profesjonelt webdesign og utvikling' : 'Professional web design and development',
+      emoji: '🎨'
+    },
+    { 
+      name: 'Wikits', 
+      url: 'https://wikits.net', 
+      desc: lang === 'no' ? 'AI-drevet læringsplattform' : 'AI-powered learning platform',
+      emoji: '📚'
+    },
+    { 
+      name: 'Cost of Living', 
+      url: 'https://costofliving.no', 
+      desc: lang === 'no' ? 'Levekostnader i Europa' : 'Cost of living in Europe',
+      emoji: '📊'
+    }
+  ]
   
   return (
     <div className="min-h-screen bg-black text-white">
@@ -46,6 +67,34 @@ export default function Home() {
           <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            <span className="text-teal-400">{t('projectsTitle1')}</span> {t('projectsTitle2')}
+          </h2>
+          <p className="text-gray-400 text-center mb-16 max-w-xl mx-auto">
+            {t('projectsDesc')}
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {projects.map((project, i) => (
+              <a 
+                key={i}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] group"
+              >
+                <div className="text-4xl mb-4">{project.emoji}</div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">{project.name}</h3>
+                <p className="text-gray-400 text-sm">{project.desc}</p>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
