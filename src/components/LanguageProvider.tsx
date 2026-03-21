@@ -17,12 +17,36 @@ const translations: Record<Language, Record<string, string>> = {
     agents: 'Agenter',
     
     // Hero
-    heroBadge: '🤖 AI & Web Development Studio',
+    heroBadge: 'AI & Web Development Studio',
     heroTitle1: 'Bygger',
     heroTitle2: 'Fremtiden',
     heroDesc: 'Vi lager intelligente AI-assistenter og fantastiske webopplevelser. Fra konsept til produksjon.',
     heroCta: 'Se Agenter →',
     heroContact: 'Kontakt Oss',
+    
+    // Projects
+    projectsTitle1: 'Våre',
+    projectsTitle2: 'Prosjekter',
+    projectsDesc: 'Noen av prosjektene vi har bygget',
+    project1Category: 'Verktøy',
+    project1Desc: 'Levekostnader i 26+ europeiske land',
+    project2Category: 'Design',
+    project2Desc: 'Profesjonelt webdesign og utvikling',
+    project3Category: 'Læring',
+    project3Desc: 'AI-drevet læringsplattform',
+    project4Category: 'Agent',
+    project4Title: 'PeakBrowser',
+    project4Desc: 'Desktop AI-agent app',
+    
+    // About
+    aboutTitle: 'Om',
+    aboutTitle2: 'Oss',
+    aboutP1: 'Vi er et team av dedikerte utviklere og designere som brenner for å bygge innovative digitale løsninger.',
+    aboutP2: 'Fra AI-agenter til webapplikasjoner, vi elsker å ta komplekse ideer og gjøre dem enkle og tilgjengelige.',
+    aboutP3: 'Vi tror på å bygge ting som hjelper folk og bedrifter å spare tid og øke produktiviteten.',
+    stat1: 'Aktive Prosjekter',
+    stat2: 'Linjer med Kode',
+    stat3: 'Kaffe drukket',
     
     // Services
     servicesTitle1: 'Våre',
@@ -50,24 +74,17 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     rights: 'Alle rettigheter reservert.',
     
-    // Landing page agents section
-    viewAgents: 'Se Alle Agenter →',
-    
     // Agents page
-    heroAgentsBadge: '🤖 AI Agent Bibliotek',
+    heroAgentsBadge: 'AI Agent Bibliotek',
     heroAgentsTitle1: 'Nedlastbare',
     heroAgentsTitle2: 'AI Agenter',
     heroAgentsDesc: 'Ferdige AI-agent-promptes for OpenClaw og andre plattformer. Last ned, tilpass og implementer på minutter.',
     allAgents: 'Alle',
     download: 'Last ned',
-    
-    // CTA agents
     needHelp: 'Trenger du',
     help: 'hjelp',
     helpDesc: 'Vi hjelper deg med å sette opp og tilpasse agenter for din bedrift.',
     contact: 'Kontakt oss →',
-    
-    // Detail Modal
     description: 'Beskrivelse',
     skills: 'Kjernekompetanse',
     method: 'Arbeidsmetode',
@@ -80,12 +97,36 @@ const translations: Record<Language, Record<string, string>> = {
     agents: 'Agents',
     
     // Hero
-    heroBadge: '🤖 AI & Web Development Studio',
+    heroBadge: 'AI & Web Development Studio',
     heroTitle1: 'Building',
     heroTitle2: 'Tomorrow',
     heroDesc: 'We craft intelligent AI assistants and stunning web experiences. From concept to deployment.',
     heroCta: 'View Agents →',
     heroContact: 'Contact Us',
+    
+    // Projects
+    projectsTitle1: 'Our',
+    projectsTitle2: 'Projects',
+    projectsDesc: 'Some of the projects we have built',
+    project1Category: 'Tool',
+    project1Desc: 'Cost of living in 26+ European countries',
+    project2Category: 'Design',
+    project2Desc: 'Professional web design and development',
+    project3Category: 'Learning',
+    project3Desc: 'AI-powered learning platform',
+    project4Category: 'Agent',
+    project4Title: 'PeakBrowser',
+    project4Desc: 'Desktop AI agent app',
+    
+    // About
+    aboutTitle: 'About',
+    aboutTitle2: 'Us',
+    aboutP1: 'We are a team of dedicated developers and designers passionate about building innovative digital solutions.',
+    aboutP2: 'From AI agents to web applications, we love taking complex ideas and making them simple and accessible.',
+    aboutP3: 'We believe in building things that help people and businesses save time and increase productivity.',
+    stat1: 'Active Projects',
+    stat2: 'Lines of Code',
+    stat3: 'Coffee Consumed',
     
     // Services
     servicesTitle1: 'Our',
@@ -113,24 +154,17 @@ const translations: Record<Language, Record<string, string>> = {
     // Footer
     rights: 'All rights reserved.',
     
-    // Landing page agents section
-    viewAgents: 'View All Agents →',
-    
     // Agents page
-    heroAgentsBadge: '🤖 AI Agent Library',
+    heroAgentsBadge: 'AI Agent Library',
     heroAgentsTitle1: 'Downloadable',
     heroAgentsTitle2: 'AI Agents',
     heroAgentsDesc: 'Ready-to-use AI agent prompts for OpenClaw and other platforms. Download, customize, implement in minutes.',
     allAgents: 'All',
     download: 'Download',
-    
-    // CTA agents
     needHelp: 'Need',
     help: 'help',
     helpDesc: 'We help you set up and customize agents for your business.',
     contact: 'Contact us →',
-    
-    // Detail Modal
     description: 'Description',
     skills: 'Core Skills',
     method: 'Work Method',

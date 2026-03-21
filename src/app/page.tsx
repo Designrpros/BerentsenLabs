@@ -7,27 +7,6 @@ import { useLanguage } from '@/components/LanguageProvider'
 export default function Home() {
   const { lang, t } = useLanguage()
   
-  const projects = [
-    { 
-      name: 'Designr.Pro', 
-      url: 'https://designr.pro', 
-      desc: lang === 'no' ? 'Profesjonelt webdesign og utvikling' : 'Professional web design and development',
-      emoji: '🎨'
-    },
-    { 
-      name: 'Wikits', 
-      url: 'https://wikits.net', 
-      desc: lang === 'no' ? 'AI-drevet læringsplattform' : 'AI-powered learning platform',
-      emoji: '📚'
-    },
-    { 
-      name: 'Cost of Living', 
-      url: 'https://costofliving.no', 
-      desc: lang === 'no' ? 'Levekostnader i Europa' : 'Cost of living in Europe',
-      emoji: '📊'
-    }
-  ]
-  
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -80,19 +59,67 @@ export default function Home() {
             {t('projectsDesc')}
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            {projects.map((project, i) => (
-              <a 
-                key={i}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] group"
-              >
-                <div className="text-4xl mb-4">{project.emoji}</div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-teal-400 transition-colors">{project.name}</h3>
-                <p className="text-gray-400 text-sm">{project.desc}</p>
-              </a>
+          <div className="grid md:grid-cols-2 gap-8">
+            <a href="https://costofliving.no" target="_blank" className="group relative rounded-2xl overflow-hidden border border-white/10">
+              <div className="aspect-video bg-gradient-to-br from-teal-900 to-black p-8 flex flex-col justify-end">
+                <div className="absolute top-4 right-4 text-sm text-teal-400">{t('project1Category')}</div>
+                <h3 className="text-3xl font-bold mb-2">Cost of Living</h3>
+                <p className="text-gray-400">{t('project1Desc')}</p>
+              </div>
+            </a>
+            <a href="https://designr.pro" target="_blank" className="group relative rounded-2xl overflow-hidden border border-white/10">
+              <div className="aspect-video bg-gradient-to-br from-purple-900 to-black p-8 flex flex-col justify-end">
+                <div className="absolute top-4 right-4 text-sm text-purple-400">{t('project2Category')}</div>
+                <h3 className="text-3xl font-bold mb-2">Designr.Pro</h3>
+                <p className="text-gray-400">{t('project2Desc')}</p>
+              </div>
+            </a>
+            <a href="https://wikits.net" target="_blank" className="group relative rounded-2xl overflow-hidden border border-white/10">
+              <div className="aspect-video bg-gradient-to-br from-blue-900 to-black p-8 flex flex-col justify-end">
+                <div className="absolute top-4 right-4 text-sm text-blue-400">{t('project3Category')}</div>
+                <h3 className="text-3xl font-bold mb-2">Wikits</h3>
+                <p className="text-gray-400">{t('project3Desc')}</p>
+              </div>
+            </a>
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10">
+              <div className="aspect-video bg-gradient-to-br from-orange-900 to-black p-8 flex flex-col justify-end">
+                <div className="absolute top-4 right-4 text-sm text-orange-400">{t('project4Category')}</div>
+                <h3 className="text-3xl font-bold mb-2">{t('project4Title')}</h3>
+                <p className="text-gray-400">{t('project4Desc')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-32 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+            <span className="text-teal-400">{t('aboutTitle')}</span> {t('aboutTitle2')}
+          </h2>
+          <div className="text-xl text-gray-300 space-y-6">
+            <p>
+              <span className="text-teal-400 font-bold">Berentsen Labs</span> {t('aboutP1')}
+            </p>
+            <p>
+              {t('aboutP2')}
+            </p>
+            <p>
+              {t('aboutP3')}
+            </p>
+          </div>
+          
+          <div className="mt-16 grid grid-cols-3 gap-8">
+            {[
+              { number: '50+', label: t('stat1') },
+              { number: '210+', label: t('stat2') },
+              { number: '∞', label: t('stat3') }
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-teal-400">{stat.number}</div>
+                <div className="text-gray-400 mt-2">{stat.label}</div>
+              </div>
             ))}
           </div>
         </div>
