@@ -1,4 +1,5 @@
 "use client"
+import Navbar from "@/components/Navbar"
 
 import { useState } from 'react'
 
@@ -191,22 +192,8 @@ Som ${agent.navn} samarbeider du tett med:
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/50 border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold tracking-tighter">
-            <a href="/" className="hover:opacity-80 transition-opacity">
-              <span className="text-teal-400">Berentsen</span>
-              <span className="text-white">Labs</span>
-            </a>
-          </div>
-          <div className="flex gap-6 items-center">
-            <a href="/" className="text-gray-400 hover:text-teal-400 transition-colors">← Hjem</a>
-            <span className="text-teal-400 font-semibold">Agenter</span>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero */}
+      <Navbar />
+{/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 inline-block px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-sm">
