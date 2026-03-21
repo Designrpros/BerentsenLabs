@@ -1,220 +1,221 @@
 "use client"
-import Navbar from "@/components/Navbar"
 
 import { useState } from 'react'
+import Navbar from '@/components/Navbar'
+import { LanguageProvider, useLanguage } from '@/components/LanguageProvider'
 
-const agenter = [
-  {
-    id: "frontend-developer",
-    emoji: "🎨",
-    navn: "Frontend Utvikler",
-    engelsk: "Frontend Developer",
-    beskrivelse: "Spesialist på moderne webteknologier, React, Vue, CSS og responsiv design. Bygger vakre, funksjonelle brukergrensesnitt.",
-    category: "engineering",
-    kompetanse: ["React", "Vue", "TypeScript", "CSS", "Tailwind", "Responsivt Design", "Web Performance"],
-    Arbeidsmetode: [
-      "Analyse av kravspesifikasjoner",
-      "Valg av teknologistakk",
-      "Komponentbasert arkitektur",
-      "Testing på tvers av nettlesere",
-      "Optimalisering for hastighet"
-    ]
-  },
-  {
-    id: "backend-architect",
-    emoji: "🏗️",
-    navn: "Backend Arkitekt",
-    engelsk: "Backend Architect",
-    beskrivelse: "Ekspert på API-er, databaser, serverlogikk og systemarkitektur. Designer skalerbare backend-løsninger.",
-    category: "engineering",
-    kompetanse: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL", "REST API", "Docker"],
-    Arbeidsmetode: [
-      "Systemanalyse og design",
-      "API-arkitektur",
-      "Databasemodellering",
-      "Sikkerhetsgjennomgang",
-      "Skalering og monitoring"
-    ]
-  },
-  {
-    id: "ui-designer",
-    emoji: "✨",
-    navn: "UI/UX Designer",
-    engelsk: "UI/UX Designer",
-    beskrivelse: "Skapende designer med fokus på brukeropplevelse, interaksjonsdesign og visuell kommunikasjon.",
-    category: "design",
-    kompetanse: ["Figma", "Adobe XD", "Brukerresearch", "Prototyping", "Design Systems", "WCAG"],
-    Arbeidsmetode: [
-      "Brukerresearch og innsikt",
-      "Wireframing og prototyping",
-      "Visuelt design",
-      "Design systems",
-      "Brukertesting"
-    ]
-  },
-  {
-    id: "data-analyst",
-    emoji: "📊",
-    navn: "Dataanalytiker",
-    engelsk: "Data Analyst",
-    beskrivelse: "Ekspert på dataanalyse, visualisering og innsiktsutvinning fra komplekse datasett.",
-    category: "engineering",
-    kompetanse: ["Python", "SQL", "Tableau", "Power BI", "Pandas", "Statistikk", "Machine Learning"],
-    Arbeidsmetode: [
-      "Datainnsamling og rensing",
-      "Eksplorativ analyse",
-      "Statistisk modellering",
-      "Visualisering",
-      "Innsiktsrapportering"
-    ]
-  },
-  {
-    id: "devops-automator",
-    emoji: "🔧",
-    navn: "DevOps Automator",
-    engelsk: "DevOps Automator",
-    beskrivelse: "Automatiserer arbeidsflyter, CI/CD pipelines og infrastrukturoppsett for sømløs drift.",
-    category: "engineering",
-    kompetanse: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "AWS", "Azure", "Monitoring"],
-    Arbeidsmetode: [
-      "Infrastrukturgjennomgang",
-      "CI/CD pipeline-oppsett",
-      "Automatisering",
-      "Overvåkning",
-      "Dokumentasjon"
-    ]
-  },
-  {
-    id: "ai-engineer",
-    emoji: "🤖",
-    navn: "AI-Ingeniør",
-    engelsk: "AI Engineer",
-    beskrivelse: "Bygger og integrerer AI-løsninger, maskinlæringsmodeller og intelligente systemer.",
-    category: "engineering",
-    kompetanse: ["Python", "TensorFlow", "PyTorch", "LangChain", "OpenAI API", "Vector DB", "RAG"],
-    Arbeidsmetode: [
-      "Behovsanalyse",
-      "Modellvalg og trenng",
-      "Integrasjon",
-      "Testing og evaluering",
-      "Deployment og monitoring"
-    ]
-  },
-  {
-    id: "code-reviewer",
-    emoji: "🔍",
-    navn: "Kodegransker",
-    engelsk: "Code Reviewer",
-    beskrivelse: "Kvalitetssikrer kode, identifiserer bugs og foreslår forbedringer for optimal kodekvalitet.",
-    category: "engineering",
-    kompetanse: ["Code Analysis", "Testing", "Security", "Performance", "Best Practices", "Documentation"],
-    Arbeidsmetode: [
-      "Kodegjennomgang",
-      "Bug-identifisering",
-      "Sikkerhetsanalyse",
-      "Prestasjonsvurdering",
-      "Forbedringsforslag"
-    ]
-  },
-  {
-    id: "product-manager",
-    emoji: "🎯",
-    navn: "Produktleder",
-    engelsk: "Product Manager",
-    beskrivelse: "Leder produktutvikling fra konsept til lansering med fokus på brukerbehov og forretningsmål.",
-    category: "other",
-    kompetanse: ["Roadmapping", "Agile", "Scrum", "Brukerstories", "KPI-er", "Markedsanalyse"],
-    Arbeidsmetode: [
-      "Markedsresearch",
-      "Kravinnsamling",
-      "Prioritering",
-      "Sprintplanlegging",
-      "Lanseringsoppfølging"
-    ]
-  }
-]
+const agenterData = {
+  no: [
+    {
+      id: "frontend-developer",
+      emoji: "🎨",
+      navn: "Frontend Utvikler",
+      beskrivelse: "Spesialist på moderne webteknologier, React, Vue, CSS og responsiv design.",
+      kompetanse: ["React", "Vue", "TypeScript", "CSS", "Tailwind", "Responsivt Design"],
+      Arbeidsmetode: ["Analyse av krav", "Valg av teknologistakk", "Komponentbasert arkitektur", "Testing", "Optimalisering"]
+    },
+    {
+      id: "backend-architect",
+      emoji: "🏗️",
+      navn: "Backend Arkitekt",
+      beskrivelse: "Ekspert på API-er, databaser, serverlogikk og systemarkitektur.",
+      kompetanse: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL", "Docker"],
+      Arbeidsmetode: ["Systemanalyse", "API-arkitektur", "Databasemodellering", "Sikkerhet", "Skalering"]
+    },
+    {
+      id: "ui-designer",
+      emoji: "✨",
+      navn: "UI/UX Designer",
+      beskrivelse: "Skapende designer med fokus på brukeropplevelse og visuell kommunikasjon.",
+      kompetanse: ["Figma", "Brukerresearch", "Prototyping", "Design Systems", "WCAG"],
+      Arbeidsmetode: ["Brukerresearch", "Wireframing", "Visuelt design", "Design systems", "Brukertesting"]
+    },
+    {
+      id: "data-analyst",
+      emoji: "📊",
+      navn: "Dataanalytiker",
+      beskrivelse: "Ekspert på dataanalyse, visualisering og innsiktsutvinning.",
+      kompetanse: ["Python", "SQL", "Tableau", "Pandas", "Statistikk"],
+      Arbeidsmetode: ["Datainnsamling", "Eksplorativ analyse", "Statistisk modellering", "Visualisering", "Rapportering"]
+    },
+    {
+      id: "devops-automator",
+      emoji: "🔧",
+      navn: "DevOps Automator",
+      beskrivelse: "Automatiserer arbeidsflyter, CI/CD og infrastrukturoppsett.",
+      kompetanse: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "AWS"],
+      Arbeidsmetode: ["Infrastrukturgjennomgang", "CI/CD pipeline", "Automatisering", "Overvåkning", "Dokumentasjon"]
+    },
+    {
+      id: "ai-engineer",
+      emoji: "🤖",
+      navn: "AI-Ingeniør",
+      beskrivelse: "Bygger og integrerer AI-løsninger og intelligente systemer.",
+      kompetanse: ["Python", "TensorFlow", "LangChain", "OpenAI API", "Vector DB"],
+      Arbeidsmetode: ["Behovsanalyse", "Modellvalg", "Integrasjon", "Testing", "Deployment"]
+    },
+    {
+      id: "code-reviewer",
+      emoji: "🔍",
+      navn: "Kodegransker",
+      beskrivelse: "Kvalitetssikrer kode og identifiserer forbedringer.",
+      kompetanse: ["Code Analysis", "Testing", "Security", "Best Practices"],
+      Arbeidsmetode: ["Kodegjennomgang", "Bug-identifisering", "Sikkerhetsanalyse", "Forbedringsforslag"]
+    },
+    {
+      id: "product-manager",
+      emoji: "🎯",
+      navn: "Produktleder",
+      beskrivelse: "Leder produktutvikling fra konsept til lansering.",
+      kompetanse: ["Roadmapping", "Agile", "Scrum", "Brukerstories", "KPI-er"],
+      Arbeidsmetode: ["Markedsresearch", "Kravinnsamling", "Prioritering", "Sprintplanlegging", "Lansering"]
+    }
+  ],
+  en: [
+    {
+      id: "frontend-developer",
+      emoji: "🎨",
+      navn: "Frontend Developer",
+      beskrivelse: "Expert in modern web technologies, React, Vue, CSS and responsive design.",
+      kompetanse: ["React", "Vue", "TypeScript", "CSS", "Tailwind", "Responsive Design"],
+      Arbeidsmetode: ["Requirements analysis", "Tech stack selection", "Component architecture", "Testing", "Optimization"]
+    },
+    {
+      id: "backend-architect",
+      emoji: "🏗️",
+      navn: "Backend Architect",
+      beskrivelse: "Expert in APIs, databases, server logic and system architecture.",
+      kompetanse: ["Node.js", "Python", "PostgreSQL", "MongoDB", "GraphQL", "Docker"],
+      Arbeidsmetode: ["System analysis", "API architecture", "Database modeling", "Security review", "Scaling"]
+    },
+    {
+      id: "ui-designer",
+      emoji: "✨",
+      navn: "UI/UX Designer",
+      beskrivelse: "Creative designer focused on user experience and visual communication.",
+      kompetanse: ["Figma", "User Research", "Prototyping", "Design Systems", "WCAG"],
+      Arbeidsmetode: ["User research", "Wireframing", "Visual design", "Design systems", "User testing"]
+    },
+    {
+      id: "data-analyst",
+      emoji: "📊",
+      navn: "Data Analyst",
+      beskrivelse: "Expert in data analysis, visualization and insight extraction.",
+      kompetanse: ["Python", "SQL", "Tableau", "Pandas", "Statistics"],
+      Arbeidsmetode: ["Data collection", "Exploratory analysis", "Statistical modeling", "Visualization", "Reporting"]
+    },
+    {
+      id: "devops-automator",
+      emoji: "🔧",
+      navn: "DevOps Automator",
+      beskrivelse: "Automates workflows, CI/CD pipelines and infrastructure.",
+      kompetanse: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "AWS"],
+      Arbeidsmetode: ["Infrastructure review", "CI/CD setup", "Automation", "Monitoring", "Documentation"]
+    },
+    {
+      id: "ai-engineer",
+      emoji: "🤖",
+      navn: "AI Engineer",
+      beskrivelse: "Builds and integrates AI solutions and intelligent systems.",
+      kompetanse: ["Python", "TensorFlow", "LangChain", "OpenAI API", "Vector DB"],
+      Arbeidsmetode: ["Requirements analysis", "Model selection", "Integration", "Testing", "Deployment"]
+    },
+    {
+      id: "code-reviewer",
+      emoji: "🔍",
+      navn: "Code Reviewer",
+      beskrivelse: "Ensures code quality and identifies improvements.",
+      kompetanse: ["Code Analysis", "Testing", "Security", "Best Practices"],
+      Arbeidsmetode: ["Code review", "Bug identification", "Security analysis", "Improvement suggestions"]
+    },
+    {
+      id: "product-manager",
+      emoji: "🎯",
+      navn: "Product Manager",
+      beskrivelse: "Leads product development from concept to launch.",
+      kompetanse: ["Roadmapping", "Agile", "Scrum", "User Stories", "KPIs"],
+      Arbeidsmetode: ["Market research", "Requirements gathering", "Prioritization", "Sprint planning", "Launch"]
+    }
+  ]
+}
 
-export default function Agenter() {
-  const [valgtAgent, setValgtAgent] = useState<typeof agenter[0] | null>(null)
+function AgenterContent() {
+  const { lang, setLang, t } = useLanguage()
+  const [valgtAgent, setValgtAgent] = useState<typeof agenterData.no[0] | null>(null)
+  
+  const agenter = agenterData[lang]
 
-  const lastNedAgent = (agent: typeof agenter[0]) => {
+  const lastNedAgent = (agent: typeof agenterData.no[0]) => {
     const content = `---
 name: ${agent.id}
 emoji: ${agent.emoji}
-category: ${agent.category}
 version: 1.0.0
-language: norsk
-description: ${agent.beskrivelse}
+language: ${lang === 'no' ? 'norsk' : 'english'}
 ---
 
 # ${agent.emoji} ${agent.navn}
 
-Du er en erfaren ${agent.navn} med ekspertise i ${agent.beskrivelse}
+${lang === 'no' ? `Du er en erfaren ${agent.navn}.` : `You are an experienced ${agent.navn}.`}
 
-## Kjernekompetanse
+## ${lang === 'no' ? 'Kjernekompetanse' : 'Core Skills'}
 
 ${agent.kompetanse.map(k => `- ${k}`).join('\n')}
 
-## Arbeidsmetode
+## ${lang === 'no' ? 'Arbeidsmetode' : 'Work Method'}
 
 ${agent.Arbeidsmetode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
 
-## Ansvar
-
-- Delta aktivt i teammøter
-- Kommuniser tydelig med stakeholders
-- Dokumenter beslutninger og arkitekturvalg
-- Bidra til kodekvalitet og best practices
-- Kontinuerlig læring og forbedring
-
-## Samhandling
-
-Som ${agent.navn} samarbeider du tett med:
-- Andre utviklere og designere
-- Produktleder for kravavklaring
-- QA for testing
-- DevOps for infrastruktur
-
 ---
 
-*Generert av Berentsen Labs AI Agent System*
-*For bruk med OpenClaw og lignende AI-plattformer*
+*Generated by Berentsen Labs AI Agent System*
 `
     const blob = new Blob([content], { type: 'text/markdown' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `${agent.id}-norsk.md`
+    a.download = `${agent.id}-${lang}.md`
     a.click()
     URL.revokeObjectURL(url)
   }
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
       <Navbar />
-{/* Hero */}
+      
+      {/* Language Toggle */}
+      <div className="fixed top-20 right-4 z-40 flex gap-2">
+        <button 
+          onClick={() => setLang('no')}
+          className={`px-3 py-1 rounded-full text-sm ${lang === 'no' ? 'bg-teal-500 text-black' : 'bg-white/10 text-gray-400'}`}
+        >
+          NO
+        </button>
+        <button 
+          onClick={() => setLang('en')}
+          className={`px-3 py-1 rounded-full text-sm ${lang === 'en' ? 'bg-teal-500 text-black' : 'bg-white/10 text-gray-400'}`}
+        >
+          EN
+        </button>
+      </div>
+
+      {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 inline-block px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-sm">
-            🤖 AI Agent Bibliotek
+            🤖 {t('heroBadge')}
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-teal-400">Nedlastbare</span> AI Agenter
+            <span className="text-teal-400">{t('heroTitle1')}</span> {t('heroTitle2')}
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Ferdige AI-agent-promptes for OpenClaw og andre plattformer. 
-            Last ned, tilpass og implementer på minutter.
+            {t('heroDesc')}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <span className="px-4 py-2 rounded-full border border-white/10 text-gray-400 text-sm">
-              🇳🇴 Norsk versjon
+              {lang === 'no' ? '🇳🇴 Norsk versjon' : '🇬🇧 English version'}
             </span>
             <span className="px-4 py-2 rounded-full border border-white/10 text-gray-400 text-sm">
-              8 Agenter
-            </span>
-            <span className="px-4 py-2 rounded-full border border-white/10 text-gray-400 text-sm">
-              Gratis nedlasting
+              8 {lang === 'no' ? 'Agenter' : 'Agents'}
             </span>
           </div>
         </div>
@@ -223,23 +224,22 @@ Som ${agent.navn} samarbeider du tett med:
       {/* Agenter Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+            {t('allAgents')} <span className="text-teal-400">{lang === 'no' ? 'Agenter' : 'Agents'}</span>
+          </h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {agenter.map((agent) => (
               <div 
                 key={agent.id}
-                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] cursor-pointer group"
+                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:scale-[1.02] cursor-pointer"
                 onClick={() => setValgtAgent(agent)}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-4xl">{agent.emoji}</div>
-                  <span className="text-xs text-gray-500 uppercase tracking-wider">
-                    {agent.category}
-                  </span>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-1">{agent.navn}</h3>
-                <p className="text-sm text-teal-400 mb-4">{agent.engelsk}</p>
-                
                 <p className="text-gray-400 text-sm mb-6 line-clamp-2">{agent.beskrivelse}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -248,11 +248,6 @@ Som ${agent.navn} samarbeider du tett med:
                       {k}
                     </span>
                   ))}
-                  {agent.kompetanse.length > 3 && (
-                    <span className="px-2 py-1 rounded-full bg-white/5 text-xs text-gray-400">
-                      +{agent.kompetanse.length - 3}
-                    </span>
-                  )}
                 </div>
                 
                 <button 
@@ -262,7 +257,7 @@ Som ${agent.navn} samarbeider du tett med:
                     lastNedAgent(agent)
                   }}
                 >
-                  📥 Last ned
+                  📥 {t('download')}
                 </button>
               </div>
             ))}
@@ -280,12 +275,10 @@ Som ${agent.navn} samarbeider du tett med:
             className="bg-gray-900 border border-white/10 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
             <div className="sticky top-0 bg-gray-900 border-b border-white/10 p-6 flex items-start justify-between">
               <div>
                 <div className="text-5xl mb-2">{valgtAgent.emoji}</div>
                 <h2 className="text-2xl font-bold">{valgtAgent.navn}</h2>
-                <p className="text-teal-400">{valgtAgent.engelsk}</p>
               </div>
               <button 
                 onClick={() => setValgtAgent(null)}
@@ -295,17 +288,14 @@ Som ${agent.navn} samarbeider du tett med:
               </button>
             </div>
             
-            {/* Content */}
             <div className="p-6 space-y-6">
-              {/* Description */}
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-300">Beskrivelse</h3>
+                <h3 className="text-lg font-semibold mb-2 text-gray-300">{t('description')}</h3>
                 <p className="text-gray-400">{valgtAgent.beskrivelse}</p>
               </div>
               
-              {/* Kompetanse */}
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-300">Kjernekompetanse</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-300">{t('skills')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {valgtAgent.kompetanse.map(k => (
                     <span key={k} className="px-3 py-2 rounded-lg bg-teal-500/10 text-teal-400 text-sm border border-teal-500/20">
@@ -315,9 +305,8 @@ Som ${agent.navn} samarbeider du tett med:
                 </div>
               </div>
               
-              {/* Arbeidsmetode */}
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-300">Arbeidsmetode</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-300">{t('method')}</h3>
                 <div className="space-y-2">
                   {valgtAgent.Arbeidsmetode.map((steg, i) => (
                     <div key={i} className="flex gap-3 items-start">
@@ -329,27 +318,8 @@ Som ${agent.navn} samarbeider du tett med:
                   ))}
                 </div>
               </div>
-              
-              {/* Preview */}
-              <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-300">Eksempel</h3>
-                <pre className="bg-black/50 rounded-lg p-4 text-sm text-gray-400 overflow-x-auto">
-{`# ${valgtAgent.emoji} ${valgtAgent.navn}
-
-Du er en erfaren ${valgtAgent.navn.toLowerCase()}.
-
-## Oppgave
-
-[Beskriv din oppgave her]
-
-## Kontekst
-
-[Legg til relevant kontekst]`}
-                </pre>
-              </div>
             </div>
             
-            {/* Footer */}
             <div className="sticky bottom-0 bg-gray-900 border-t border-white/10 p-6 flex gap-4">
               <button 
                 className="flex-1 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-black font-bold rounded-lg transition-all"
@@ -358,13 +328,13 @@ Du er en erfaren ${valgtAgent.navn.toLowerCase()}.
                   setValgtAgent(null)
                 }}
               >
-                📥 Last ned som .md
+                📥 {t('downloadMd')}
               </button>
               <button 
                 className="px-6 py-3 border border-white/20 hover:border-teal-400 rounded-lg transition-all"
                 onClick={() => setValgtAgent(null)}
               >
-                Lukk
+                {t('close')}
               </button>
             </div>
           </div>
@@ -375,16 +345,16 @@ Du er en erfaren ${valgtAgent.navn.toLowerCase()}.
       <section className="py-20 px-6 bg-gradient-to-t from-teal-950/30 to-black">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Trenger du <span className="text-teal-400">hjelp</span>?
+            {t('needHelp')} <span className="text-teal-400">{t('help')}</span>?
           </h2>
           <p className="text-gray-400 mb-8">
-            Vi hjelper deg med å sette opp og tilpasse agenter for din bedrift.
+            {t('helpDesc')}
           </p>
           <a 
             href="mailto:vegarberentsen@gmail.com" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 hover:bg-teal-400 text-black font-bold rounded-lg transition-all"
           >
-            Kontakt oss →
+            {t('contact')}
           </a>
         </div>
       </section>
@@ -397,10 +367,18 @@ Du er en erfaren ${valgtAgent.navn.toLowerCase()}.
             <span className="text-white">Labs</span>
           </div>
           <div className="text-gray-500">
-            © {new Date().getFullYear()} Berentsen Labs. Alle rettigheter reservert.
+            © {new Date().getFullYear()} Berentsen Labs. {t('rights')}
           </div>
         </div>
       </footer>
     </div>
+  )
+}
+
+export default function AgenterPage() {
+  return (
+    <LanguageProvider>
+      <AgenterContent />
+    </LanguageProvider>
   )
 }
