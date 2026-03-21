@@ -49,6 +49,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            <span className="text-teal-400">{t('servicesTitle1')}</span> {t('servicesTitle2')}
+          </h2>
+          <p className="text-gray-400 text-center mb-16 max-w-xl mx-auto">
+            {t('servicesDesc')}
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: '🤖', titleKey: 'aiAssistants', descKey: 'aiAssistantsDesc' },
+              { icon: '🌐', titleKey: 'webDev', descKey: 'webDevDesc' },
+              { icon: '📱', titleKey: 'mobileApps', descKey: 'mobileAppsDesc' },
+              { icon: '🔧', titleKey: 'systemIntegration', descKey: 'systemIntegrationDesc' },
+              { icon: '🎨', titleKey: 'uiuxDesign', descKey: 'uiuxDesignDesc' },
+              { icon: '🚀', titleKey: 'deployment', descKey: 'deploymentDesc' }
+            ].map((service, i) => (
+              <div key={i} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] group">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">{t(service.titleKey)}</h3>
+                <p className="text-gray-400">{t(service.descKey)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-32 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -76,35 +105,6 @@ export default function Home() {
               <div key={i} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-teal-400">{stat.number}</div>
                 <div className="text-gray-400 mt-2">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-32 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            <span className="text-teal-400">{t('servicesTitle1')}</span> {t('servicesTitle2')}
-          </h2>
-          <p className="text-gray-400 text-center mb-16 max-w-xl mx-auto">
-            {t('servicesDesc')}
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: '🤖', titleKey: 'aiAssistants', descKey: 'aiAssistantsDesc' },
-              { icon: '🌐', titleKey: 'webDev', descKey: 'webDevDesc' },
-              { icon: '📱', titleKey: 'mobileApps', descKey: 'mobileAppsDesc' },
-              { icon: '🔧', titleKey: 'systemIntegration', descKey: 'systemIntegrationDesc' },
-              { icon: '🎨', titleKey: 'uiuxDesign', descKey: 'uiuxDesignDesc' },
-              { icon: '🚀', titleKey: 'deployment', descKey: 'deploymentDesc' }
-            ].map((service, i) => (
-              <div key={i} className="p-8 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:transform hover:scale-[1.02] group">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-teal-400 transition-colors">{t(service.titleKey)}</h3>
-                <p className="text-gray-400">{t(service.descKey)}</p>
               </div>
             ))}
           </div>
