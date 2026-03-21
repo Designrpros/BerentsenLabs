@@ -99,7 +99,7 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-3 gap-8">
             {[
               { number: '50+', label: t('stat1') },
-              { number: '210+', label: t('stat2') },
+              { number: '50K+', label: t('stat2') },
               { number: '∞', label: t('stat3') }
             ].map((stat, i) => (
               <div key={i} className="text-center">
