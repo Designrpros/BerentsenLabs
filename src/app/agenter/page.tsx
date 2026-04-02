@@ -7,7 +7,6 @@ import { useLanguage } from '@/components/LanguageProvider'
 
 const agenterData = {
   no: [
-    // ENGINEERING (24)
     { id: "frontend-developer", emoji: "🎨", navn: "Frontend Utvikler", beskrivelse: "Spesialist på moderne webteknologier, React, Vue, CSS og responsiv design.", kompetanse: ["React", "Vue", "TypeScript", "CSS", "Tailwind"], metode: ["Analyse av krav", "Valg av teknologistakk", "Komponentbasert arkitektur", "Testing", "Optimalisering"] },
     { id: "backend-architect", emoji: "🏗️", navn: "Backend Arkitekt", beskrivelse: "Ekspert på API-er, databaser, serverlogikk og systemarkitektur.", kompetanse: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Docker"], metode: ["Systemanalyse", "API-arkitektur", "Databasemodellering", "Sikkerhet", "Skalering"] },
     { id: "devops-automator", emoji: "🔧", navn: "DevOps Automator", beskrivelse: "Automatiserer arbeidsflyter, CI/CD pipelines og infrastrukturoppsett.", kompetanse: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "AWS"], metode: ["Infrastrukturgjennomgang", "CI/CD pipeline", "Automatisering", "Overvåkning", "Dokumentasjon"] },
@@ -32,8 +31,6 @@ const agenterData = {
     { id: "qa-engineer", emoji: "🧪", navn: "QA-Ingeniør", beskrivelse: "Planlegge og utføre kvalitetssikringstester for programvare.", kompetanse: ["Selenium", "JIRA", "TestRail", "Cypress", "API Testing"], metode: ["Testplanlegging", "Testutførelse", "Defect Tracking", "Reporting"] },
     { id: "solutions-architect", emoji: "🏛️", navn: "Løsningsarkitekt", beskrivelse: "Designe tekniske løsninger som møter forretningsbehov.", kompetanse: ["AWS", "Azure", "System Design", "Microservices", "API Design"], metode: ["Behovsanalyse", "Arkitekturdesign", "Prototyping", "Review"] },
     { id: "product-engineer", emoji: "🚀", navn: "Produkt-Ingeniør", beskrivelse: "Kombinere utvikling med produktforståelse for rask levering.", kompetanse: ["Full-stack", "Product Sense", "A/B Testing", "Analytics", "SQL"], metode: ["Discovery", "Development", "Launch", "Iteration"] },
-    
-    // DESIGN (8)
     { id: "ui-designer", emoji: "✨", navn: "UI-Designer", beskrivelse: "Skapende designer med fokus på visuelle grensesnitt og interaksjonsdesign.", kompetanse: ["Figma", "Adobe XD", "Sketch", "Prototyping", "Design Systems"], metode: ["Research", "Wireframing", "Visual Design", "Prototyping", "Handoff"] },
     { id: "ux-designer", emoji: "🎯", navn: "UX-Designer", beskrivelse: "Designe brukeropplevelser basert på forskning og brukeratferd.", kompetanse: ["User Research", "Personas", "Journey Mapping", "Usability Testing", "Wireframing"], metode: ["Research", "Analysis", "Design", "Testing", "Iteration"] },
     { id: "brand-designer", emoji: "🎨", navn: "Merke-Designer", beskrivelse: "Utvikle og forvalte merkevareidentitet og visuell profil.", kompetanse: ["Illustrator", "Photoshop", "Brand Strategy", "Typography", "Color Theory"], metode: ["Discovery", "Concept", "Refinement", "Guidelines"] },
@@ -44,7 +41,6 @@ const agenterData = {
     { id: "design-strategist", emoji: "📊", navn: "Design-Strateg", beskrivelse: "Koble forretningsmål med designbeslutninger for maksimal impact.", kompetanse: ["Design Thinking", "Business Strategy", "User Research", "Facilitation", "Workshops"], metode: ["Analysis", "Strategy", "Facilitation", "Coaching"] }
   ],
   en: [
-    // ENGINEERING (24)
     { id: "frontend-developer", emoji: "🎨", navn: "Frontend Developer", beskrivelse: "Expert in modern web technologies, React, Vue, CSS and responsive design.", kompetanse: ["React", "Vue", "TypeScript", "CSS", "Tailwind"], metode: ["Requirements analysis", "Tech stack selection", "Component architecture", "Testing", "Optimization"] },
     { id: "backend-architect", emoji: "🏗️", navn: "Backend Architect", beskrivelse: "Expert in APIs, databases, server logic and system architecture.", kompetanse: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Docker"], metode: ["System analysis", "API architecture", "Database modeling", "Security review", "Scaling"] },
     { id: "devops-automator", emoji: "🔧", navn: "DevOps Automator", beskrivelse: "Automates workflows, CI/CD pipelines and infrastructure setup.", kompetanse: ["GitHub Actions", "Docker", "Kubernetes", "Terraform", "AWS"], metode: ["Infrastructure review", "CI/CD pipeline", "Automation", "Monitoring", "Documentation"] },
@@ -69,8 +65,6 @@ const agenterData = {
     { id: "qa-engineer", emoji: "🧪", navn: "QA Engineer", beskrivelse: "Plan and execute quality assurance tests for software.", kompetanse: ["Selenium", "JIRA", "TestRail", "Cypress", "API Testing"], metode: ["Test planning", "Test execution", "Defect Tracking", "Reporting"] },
     { id: "solutions-architect", emoji: "🏛️", navn: "Solutions Architect", beskrivelse: "Design technical solutions that meet business needs.", kompetanse: ["AWS", "Azure", "System Design", "Microservices", "API Design"], metode: ["Requirements analysis", "Architecture design", "Prototyping", "Review"] },
     { id: "product-engineer", emoji: "🚀", navn: "Product Engineer", beskrivelse: "Combine development with product understanding for rapid delivery.", kompetanse: ["Full-stack", "Product Sense", "A/B Testing", "Analytics", "SQL"], metode: ["Discovery", "Development", "Launch", "Iteration"] },
-    
-    // DESIGN (8)
     { id: "ui-designer", emoji: "✨", navn: "UI Designer", beskrivelse: "Creative designer focused on visual interfaces and interaction design.", kompetanse: ["Figma", "Adobe XD", "Sketch", "Prototyping", "Design Systems"], metode: ["Research", "Wireframing", "Visual Design", "Prototyping", "Handoff"] },
     { id: "ux-designer", emoji: "🎯", navn: "UX Designer", beskrivelse: "Design user experiences based on research and user behavior.", kompetanse: ["User Research", "Personas", "Journey Mapping", "Usability Testing", "Wireframing"], metode: ["Research", "Analysis", "Design", "Testing", "Iteration"] },
     { id: "brand-designer", emoji: "🎨", navn: "Brand Designer", beskrivelse: "Develop and manage brand identity and visual profile.", kompetanse: ["Illustrator", "Photoshop", "Brand Strategy", "Typography", "Color Theory"], metode: ["Discovery", "Concept", "Refinement", "Guidelines"] },
@@ -113,53 +107,53 @@ ${agent.metode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-zinc-50 text-zinc-950">
       <Navbar />
       <LanguageToggle />
 
-      {/* Hero */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-6 inline-block px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 text-sm">
+      {/* Hero - Brutalist */}
+      <section className="pt-32 pb-20 px-6 border-b border-zinc-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-xs text-zinc-400 mb-8 tracking-widest uppercase">
             {t('heroAgentsBadge')}
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-teal-400">{t('heroAgentsTitle1')}</span> {t('heroAgentsTitle2')}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light leading-none tracking-tight mb-8">
+            {t('heroAgentsTitle1')}<br />
+            <span className="text-zinc-400">{t('heroAgentsTitle2')}</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-zinc-500 max-w-xl">
             {t('heroAgentsDesc')}
           </p>
         </div>
       </section>
 
-      {/* Agenter Grid */}
+      {/* Agenter Grid - Brutalist */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            {t('allAgents')} <span className="text-teal-400">{lang === 'no' ? 'Agenter' : 'Agents'}</span>
-            <span className="text-gray-500 text-xl ml-2">(32)</span>
-          </h2>
+          <div className="text-xs text-zinc-400 mb-12 tracking-widest uppercase">
+            {t('allAgents')} — 32
+          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-px bg-zinc-200">
             {agenter.map((agent) => (
               <div 
                 key={agent.id}
-                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-teal-500/50 transition-all hover:scale-[1.02] cursor-pointer"
+                className="bg-zinc-50 p-6 hover:bg-zinc-100 transition-colors cursor-pointer"
                 onClick={() => setValgtAgent(agent)}
               >
-                <div className="text-4xl mb-4">{agent.emoji}</div>
-                <h3 className="text-xl font-bold mb-1">{agent.navn}</h3>
-                <p className="text-gray-400 text-sm mb-6 line-clamp-2">{agent.beskrivelse}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="text-3xl mb-4">{agent.emoji}</div>
+                <h3 className="text-base font-medium mb-1">{agent.navn}</h3>
+                <p className="text-sm text-zinc-500 mb-4 line-clamp-2">{agent.beskrivelse}</p>
+                <div className="flex flex-wrap gap-1 mb-4">
                   {agent.kompetanse.slice(0, 3).map((k) => (
-                    <span key={k} className="px-2 py-1 rounded-full bg-white/5 text-xs text-gray-400">{k}</span>
+                    <span key={k} className="px-2 py-0.5 bg-zinc-100 text-zinc-600 text-xs">{k}</span>
                   ))}
                 </div>
                 <button 
-                  className="w-full px-4 py-2 bg-teal-500 hover:bg-teal-400 text-black font-semibold text-sm rounded-lg transition-all"
+                  className="w-full px-4 py-2 border border-zinc-950 text-sm font-medium hover:bg-zinc-950 hover:text-zinc-50 transition-colors"
                   onClick={(e) => { e.stopPropagation(); lastNedAgent(agent); }}
                 >
-                  📥 {t('download')}
+                  ↓ {t('download')}
                 </button>
               </div>
             ))}
@@ -167,47 +161,47 @@ ${agent.metode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
         </div>
       </section>
 
-      {/* Detail Modal */}
+      {/* Detail Modal - Brutalist */}
       {valgtAgent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" onClick={() => setValgtAgent(null)}>
-          <div className="bg-gray-900 border border-white/10 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-            <div className="sticky top-0 bg-gray-900 border-b border-white/10 p-6 flex items-start justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-zinc-950/80 backdrop-blur-sm" onClick={() => setValgtAgent(null)}>
+          <div className="bg-zinc-50 border border-zinc-200 max-w-2xl w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+            <div className="sticky top-0 bg-zinc-50 border-b border-zinc-200 p-6 flex items-start justify-between">
               <div>
-                <div className="text-5xl mb-2">{valgtAgent.emoji}</div>
-                <h2 className="text-2xl font-bold">{valgtAgent.navn}</h2>
+                <div className="text-4xl mb-2">{valgtAgent.emoji}</div>
+                <h2 className="text-2xl font-medium">{valgtAgent.navn}</h2>
               </div>
-              <button onClick={() => setValgtAgent(null)} className="p-2 hover:bg-white/10 rounded-lg text-2xl">×</button>
+              <button onClick={() => setValgtAgent(null)} className="text-2xl text-zinc-400 hover:text-zinc-950 transition-colors">×</button>
             </div>
             <div className="p-6 space-y-6">
               <div>
-                <h3 className="text-lg font-semibold mb-2 text-gray-300">{t('description')}</h3>
-                <p className="text-gray-400">{valgtAgent.beskrivelse}</p>
+                <h3 className="text-xs text-zinc-400 uppercase tracking-widest mb-2">{t('description')}</h3>
+                <p className="text-zinc-600">{valgtAgent.beskrivelse}</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-300">{t('skills')}</h3>
+                <h3 className="text-xs text-zinc-400 uppercase tracking-widest mb-3">{t('skills')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {valgtAgent.kompetanse.map((k) => (
-                    <span key={k} className="px-3 py-2 rounded-lg bg-teal-500/10 text-teal-400 text-sm border border-teal-500/20">{k}</span>
+                    <span key={k} className="px-3 py-1.5 bg-zinc-950 text-zinc-50 text-sm">{k}</span>
                   ))}
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-300">{t('method')}</h3>
+                <h3 className="text-xs text-zinc-400 uppercase tracking-widest mb-3">{t('method')}</h3>
                 <div className="space-y-2">
                   {valgtAgent.metode.map((steg, i) => (
                     <div key={i} className="flex gap-3 items-start">
-                      <span className="w-6 h-6 rounded-full bg-teal-500/20 text-teal-400 flex items-center justify-center text-sm font-bold flex-shrink-0">{i + 1}</span>
-                      <span className="text-gray-400 pt-1">{steg}</span>
+                      <span className="w-6 h-6 bg-zinc-200 text-zinc-600 flex items-center justify-center text-sm font-medium flex-shrink-0">{i + 1}</span>
+                      <span className="text-zinc-600 pt-0.5">{steg}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            <div className="sticky bottom-0 bg-gray-900 border-t border-white/10 p-6 flex gap-4">
-              <button className="flex-1 px-6 py-3 bg-teal-500 hover:bg-teal-400 text-black font-bold rounded-lg transition-all" onClick={() => { lastNedAgent(valgtAgent); setValgtAgent(null); }}>
-                📥 {t('downloadMd')}
+            <div className="sticky bottom-0 bg-zinc-50 border-t border-zinc-200 p-6 flex gap-4">
+              <button className="flex-1 px-6 py-3 bg-zinc-950 text-zinc-50 font-medium hover:bg-zinc-800 transition-colors" onClick={() => { lastNedAgent(valgtAgent); setValgtAgent(null); }}>
+                ↓ {t('downloadMd')}
               </button>
-              <button className="px-6 py-3 border border-white/20 hover:border-teal-400 rounded-lg transition-all" onClick={() => setValgtAgent(null)}>
+              <button className="px-6 py-3 border border-zinc-300 font-medium hover:border-zinc-950 transition-colors" onClick={() => setValgtAgent(null)}>
                 {t('close')}
               </button>
             </div>
@@ -215,22 +209,31 @@ ${agent.metode.map((steg, i) => `${i + 1}. ${steg}`).join('\n')}
         </div>
       )}
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-gradient-to-t from-teal-950/30 to-black">
+      {/* CTA - Brutalist */}
+      <section className="py-24 px-6 bg-zinc-100 border-t border-zinc-200">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('needHelp')} <span className="text-teal-400">{t('help')}</span>?</h2>
-          <p className="text-gray-400 mb-8">{t('helpDesc')}</p>
-          <a href="mailto:vegarberentsen@gmail.com" className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500 hover:bg-teal-400 text-black font-bold rounded-lg transition-all">
-            {t('contact')}
+          <div className="text-3xl md:text-4xl font-light leading-tight mb-6">
+            {t('needHelp')} <span className="text-zinc-400">{t('help')}</span>?
+          </div>
+          <p className="text-zinc-500 mb-8 max-w-md mx-auto">
+            {t('helpDesc')}
+          </p>
+          <a href="mailto:vegarberentsen@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 bg-zinc-950 text-zinc-50 font-medium hover:bg-zinc-800 transition-colors">
+            {t('contact')} →
           </a>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-white/10">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-2xl font-bold"><span className="text-teal-400">Berentsen</span><span className="text-white">Labs</span></div>
-          <div className="text-gray-500">© {new Date().getFullYear()} Berentsen Labs. {t('rights')}</div>
+      <footer className="py-12 px-6 border-t border-zinc-200">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-xl font-medium tracking-tight">
+            <span className="text-zinc-950">Berentsen</span>
+            <span className="text-zinc-400">Labs</span>
+          </div>
+          <div className="text-sm text-zinc-400">
+            © {new Date().getFullYear()} Berentsen Labs. {t('rights')}
+          </div>
         </div>
       </footer>
     </div>
