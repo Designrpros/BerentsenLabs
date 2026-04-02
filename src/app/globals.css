@@ -1,20 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --stone-bg: #fafafa;
-  --stone-panel: #ffffff;
-  --stone-border: rgba(0,0,0,0.08);
-  --stone-text: #09090b;
-  --stone-muted: rgba(9,9,11,0.5);
-  --dark-bg: #09090b;
-  --dark-panel: #18181b;
-  --dark-border: rgba(255,255,255,0.08);
-  --dark-text: #fafafa;
-  --dark-muted: rgba(250,250,250,0.5);
+@theme {
+  --color-stone-bg: #fafafa;
+  --color-stone-panel: #ffffff;
+  --color-stone-border: rgba(0,0,0,0.08);
+  --color-stone-text: #09090b;
+  --color-stone-muted: rgba(9,9,11,0.5);
+  --color-dark-bg: #09090b;
+  --color-dark-panel: #18181b;
+  --color-dark-border: rgba(255,255,255,0.08);
+  --color-dark-text: #fafafa;
+  --color-dark-muted: rgba(250,250,250,0.5);
 }
 
 * {
@@ -29,22 +25,8 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: var(--stone-bg);
-  color: var(--stone-text);
-}
-
-/* Grid pattern background */
-.grid-pattern {
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Dark section */
-.section-dark {
-  background: var(--dark-bg);
-  color: var(--dark-text);
+  background: var(--color-stone-bg);
+  color: var(--color-stone-text);
 }
 
 /* Custom scrollbar */
@@ -69,10 +51,3 @@ body {
 ::selection {
   background: rgba(0,0,0,0.1);
 }
-
-/* Animation delays */
-.delay-100 { animation-delay: 100ms; }
-.delay-200 { animation-delay: 200ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }

@@ -15,6 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3NJ4MJ8KJ"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
