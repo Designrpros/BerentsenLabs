@@ -181,8 +181,10 @@ const LanguageContext = createContext<LanguageContextType | null>(null)
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLang] = useState<Language>('no')
+  const [mounted, setMounted] = useState(false)
   
   useEffect(() => {
+    setMounted(true)
     const browserLang = navigator.language.toLowerCase()
     if (browserLang.startsWith('no')) {
       setLang('no')
@@ -191,11 +193,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
   
+  // Return provider with default values during SSR to avoid hydration mismatch
   const t = (key: string) => translations[lang][key] || key
   
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {children}
+      {mounted ? children : <div className="min-h-screen bg-zinc-50" />}
     </LanguageContext.Provider>
   )
 }
