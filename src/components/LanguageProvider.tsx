@@ -193,12 +193,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     }
   }, [])
   
-  // Return provider with default values during SSR to avoid hydration mismatch
   const t = (key: string) => translations[lang][key] || key
   
   return (
     <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {mounted ? children : <div className="min-h-screen bg-zinc-50" />}
+      {children}
     </LanguageContext.Provider>
   )
 }
