@@ -37,7 +37,7 @@ export default function AgenterPage() {
   const lastNedAgent = (agent: typeof agentsData[0]) => {
     const name = agent.name
     const description = agent.description
-    const fullContent = agent.content || description
+    const fullContent = description
     
     const header = `# ${agent.emoji} ${name}
 
